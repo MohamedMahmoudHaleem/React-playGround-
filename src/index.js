@@ -7,12 +7,12 @@ function App() {
     <div className="container">
       <Avatar />
       <Info />
-      <Skills />
+      <Skills emoji1="💪" emoji2="👍" emoji3="👶" />
     </div>
   );
 }
 function Avatar() {
-  return <img className="img" alt='mohamed mahmoud'src="pic/mohamed-1.jpg" />;
+  return <img className="img" alt="mohamed mahmoud" src="pic/mohamed-1.jpg" />;
 }
 function Info() {
   return (
@@ -20,20 +20,20 @@ function Info() {
       <h2>Mohamed Mahmoud</h2>
       <p>
         Front-End Web Developer Looking for opportunity as React engineer , my hobbies playing football ,lifting weights and
-        travelling 
+        travelling
       </p>
     </div>
   );
 }
-function Skills() {
+function Skills(props) {
   return (
     <div className="skills">
-      <button className="btn btn-1">HTML+CSS 💪</button>
-      <button className="btn btn-2">JavaScript 💪</button>
-      <button className="btn btn-3">Web Design 💪</button>
-      <button className="btn btn-4">Git and GitHup 👍</button>
-      <button className="btn btn-5">React 👍</button>
-      <button className="btn btn-6">Sevelt 👶</button>
+      <button className="btn btn-1">HTML+CSS {props.emoji1}</button>
+      <button className="btn btn-2">JavaScript {props.emoji1}</button>
+      <button className="btn btn-3">Web Design {props.emoji1}</button>
+      <button className="btn btn-4">Git and GitHup {props.emoji2}</button>
+      <button className="btn btn-5">React {props.emoji2}</button>
+      <button className="btn btn-6">Sevelt {props.emoji3}</button>
     </div>
   );
 }
