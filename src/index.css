@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 700px;
+  margin: 20px 50%;
+  font-family: "Source Code Pro", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 450px;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.img {
+  object-fit: cover;
+  object-position: 20% 10%;
+  min-width: 400px; 
+  max-height: 400px;
+  margin: 5px;
+}
+.info,
+.skills {
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.skills .btn {
+  color: #f3f3f3;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+}
+.skills .btn.btn-1 {
+  background-color: rgb(146, 43, 241);
+}
+.skills .btn.btn-2 {
+  background-color: slateblue;
+}
+.skills .btn.btn-3 {
+  background-color: slategray;
+}
+.skills .btn.btn-4 {
+  background-color: skyblue;
+}
+.skills .btn.btn-5 {
+  background-color: #1877f2;
+}
+.skills .btn.btn-6 {
+  background-color: orangered;
+}
+
+.skills .btn:hover{
+  cursor: pointer;
+  opacity: .5;
+}
