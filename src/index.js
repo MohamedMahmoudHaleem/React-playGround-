@@ -2,12 +2,46 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+const skills = [
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "#2662EA",
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "#EFD81D",
+  },
+  {
+    skill: "Web Design",
+    level: "advanced",
+    color: "#C3DCAF",
+  },
+  {
+    skill: "Git and GitHub",
+    level: "intermediate",
+    color: "#E84F33",
+  },
+  {
+    skill: "React",
+    level: "advanced",
+    color: "#60DAFB",
+  },
+  {
+    skill: "Svelte",
+    level: "beginner",
+    color: "#FF3B00",
+  },
+];
 function App() {
   return (
     <div className="container">
       <Avatar />
       <Info />
-      <Skills emoji1="💪" emoji2="👍" emoji3="👶" />
+      {skills.map((sk) => (
+        <Skills skillObj={sk} key={sk.skill} />
+      ))}
     </div>
   );
 }
@@ -19,21 +53,20 @@ function Info() {
     <div className="info">
       <h2>Mohamed Mahmoud</h2>
       <p>
-        Front-End Web Developer Looking for opportunity as React engineer , my hobbies playing football ,lifting weights and
-        travelling
+        Front-End Engineer Looking for opportunity as React Web-Developer , my hobbies are playing football ,lifting weights
+        and travelling
       </p>
     </div>
   );
 }
-function Skills(props) {
+function Skills({ skillObj }) {
+  console.log(skillObj);
   return (
     <div className="skills">
-      <button className="btn btn-1">HTML+CSS {props.emoji1}</button>
-      <button className="btn btn-2">JavaScript {props.emoji1}</button>
-      <button className="btn btn-3">Web Design {props.emoji1}</button>
-      <button className="btn btn-4">Git and GitHup {props.emoji2}</button>
-      <button className="btn btn-5">React {props.emoji2}</button>
-      <button className="btn btn-6">Sevelt {props.emoji3}</button>
+      <button className="skills btn" style={{ background: skillObj.color }}>
+        {skillObj.skill}
+        <span>{skillObj.level === "advanced" ? " 💪" : skillObj.level === "intermediate" ? " 👍" : " 👶"}</span>
+      </button>
     </div>
   );
 }

@@ -25,21 +25,24 @@ body {
   max-height: 400px;
   margin: 5px;
 }
-.info,
+.info{
+  text-align: center;
+  padding: 5px 10px;
+}
+
 .skills {
+  display:inline-block;  
   text-align: center;
   padding: 5px 10px;
 }
 
 .skills .btn {
-  color: #f3f3f3;
-  font-weight: bold;
-  padding: 5px;
-  margin: 5px;
+  color: black;
+  font-weight: bold;  
   border: none;
   border-radius: 5px;
 }
-.skills .btn.btn-1 {
+/* .skills .btn.btn-1 {
   background-color: rgb(146, 43, 241);
 }
 .skills .btn.btn-2 {
@@ -56,7 +59,7 @@ body {
 }
 .skills .btn.btn-6 {
   background-color: orangered;
-}
+} */
 
 .skills .btn:hover{
   cursor: pointer;
